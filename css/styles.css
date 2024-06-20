@@ -1,101 +1,189 @@
-body{
-    background-color: rgb(230, 230, 230);
-}
-a:link{
-    color: aquamarine;
+a:link {
+  color: #000;
 }
 
 a:visited {
- color: blueviolet;
+  color: blueviolet;
 }
-a:hover{
-    color: blue;
+a:hover {
+  color: blue;
 }
 
 a:active {
-    color: brown;
+  color: brown;
 }
-li:nth-child(1){
-    border-radius: 5px;
-    background-color: azure;
+li:nth-child(1) {
+  border-radius: 5px;
+  background-color: azure;
 }
-h3::before{
-    content: "-";
+h3::before {
+  content: "-";
 }
-h3::after{
-    content: "";
+h3::after {
+  content: "";
 }
 .highlight::before {
-    content: "★ ";
-    color: gold;
+  content: "★ ";
+  color: gold;
 }
 
 .highlight::after {
-    content: " ★";
-    color: gold;
+  content: " ★";
+  color: gold;
 }
 
 .blockquote::before {
-    content: open-quote;
-    font-size: 2em;
-    color: gray;
-    margin-right: 10px;
+  content: open-quote;
+  font-size: 2em;
+  color: gray;
+  margin-right: 10px;
 }
 
 .blockquote::after {
-    content: close-quote;
-    font-size: 2em;
-    color: gray;
-    margin-left: 10px;
+  content: close-quote;
+  font-size: 2em;
+  color: gray;
+  margin-left: 10px;
 }
 .green_text::first-line {
-    color: rgb(18, 179, 0);
+  color: rgb(18, 179, 0);
 }
 .green_text::selection {
-    color:#fff;
-    background-color: rgb(18, 179, 0);
+  color: #fff;
+  background-color: rgb(18, 179, 0);
 }
-.input_text::placeholder{
-    color: rgb(255, 0, 0);
-}
-.contenedor {
-    width: 300px;
-    height: 200px;
-    background-color: #ffffff50;
-    border: 1px solid #ccc;
-    position: relative;
-}
-.background {
-    color: aqua;
-}
-.contenido {
-    position: relative;
-    z-index: 1; /* Asegurar que el contenido esté por encima del backdrop */
-    padding: 20px;
-}
-.contenedor::backdrop {
-    backdrop-filter: blur(10px); /* Aplicar un desenfoque de 10px al fondo */
-    -webkit-backdrop-filter: blur(10px); /* Prefijo necesario para navegadores basados en WebKit como Safari */
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1; /* Asegurar que el backdrop esté detrás del contenido */
-}
-.li::marker {
-    content: close-quote;
-    font-size: 2em;
-    color: gray;
-    margin-left: 10px;
-}
-.li::spelling-error {
-    color: red;
-}
-.blockquote::grammar-error{
-    content: close-quote;
-    font-size: 2em;
-    color: gray;
-    margin-left: 10px;
+.input_text::placeholder {
+  color: rgb(255, 0, 0);
 }
 
+.contenedor {
+  background: red;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #ccc;
+  position: relative;
+  padding: 60px;
+}
+
+.contenido {
+  position: relative;
+  background-color: #ffffff50;
+  z-index: 1;
+  padding: 20px;
+}
+
+.contenedor::backdrop {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.background {
+  color: aqua;
+}
+
+/* Estilo básico para el placeholder */
+input::placeholder,
+textarea::placeholder {
+  color: #999;
+  font-style: italic;
+  font-weight: bold;
+}
+
+/* Ejemplo de propiedades adicionales */
+input#nombre::placeholder {
+  text-transform: uppercase;
+}
+
+textarea#mensaje::placeholder {
+  opacity: 0.7;
+}
+
+form {
+  margin-top: 40px;
+}
+
+.li::marker {
+  content: close-quote;
+  font-size: 2em;
+  color: gray;
+  margin-left: 10px;
+}
+.li::spelling-error {
+  color: red;
+}
+
+.color-change::marker {
+  color: royalblue;
+}
+.content-change::marker {
+  content: "🖤";
+}
+.size-change::marker {
+  font-size: 2em;
+}
+
+::spelling-error {
+  background-color: #ffcccc; /* Fondo rojo claro */
+  color: red; /* Texto rojo */
+  text-decoration: underline wavy red; /* Subrayado ondulado rojo */
+}
+
+.spelling-error {
+  text-decoration: underline wavy red;
+}
+
+::grammar-error {
+  text-decoration: underline wavy blue;
+}
+
+.grammar-error {
+  text-decoration: underline wavy blue;
+}
+
+.blockquote::grammar-error {
+  content: close-quote;
+  font-size: 2em;
+  color: gray;
+  margin-left: 10px;
+}
+
+a {
+  background-color: powderblue;
+  transition: background-color 0.5s;
+  color: #000;
+}
+
+a:hover {
+  background-color: gold;
+}
+
+:checked {
+  margin-left: 25px;
+  border: 1px solid blue;
+}
+
+.image img {
+  width: 100px;
+  height: 100px;
+}
+
+:lang(en) > q {
+  quotes: "\201C""\201D""\2018""\2019";
+}
+:lang(fr) > q {
+  quotes: "« " " »";
+}
+:lang(de) > q {
+  quotes: "»" "«" "\2039""\203A";
+}
+
+li:last-child {
+  border: 1px solid red;
+  color: red;
+}

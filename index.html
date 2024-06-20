@@ -1,25 +1,93 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="css/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Ejemplo de Pseudo-elementos</title>
-</head>
-<body>
+  </head>
+  <body>
     <h1 class="highlight">Título destacado</h1>
-    <p class="blockquote">Esta es una cita estilizada usando pseudo-elementos.</p>
-    <h2 class="green_text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore placeat sed libero nihil ad maiores, exercitationem asperiores culpa blanditiis accusamus modi tempora! Consequatur deserunt cupiditate numquam omnis earum saepe explicabo?</h2>
+    <p class="blockquote">
+      Esta es una cita estilizada usando pseudo-elementos.
+    </p>
+    <h2 class="green_text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore placeat
+      sed libero nihil ad maiores, exercitationem asperiores culpa blanditiis
+      accusamus modi tempora! Consequatur deserunt cupiditate numquam omnis
+      earum saepe explicabo?
+    </h2>
+
     <div class="contenedor">
-        <div class="contenido">
-            <h2>Contenido del contenedor</h2>
-            <p>Este es un ejemplo de cómo usar backdrop-filter con un contenedor y contenido.</p>
-        </div>
+      <div class="contenido">
+        <h2>Contenido del contenedor</h2>
+        <p>
+          Este es un ejemplo de cómo usar backdrop-filter con un contenedor y
+          contenido.
+        </p>
+      </div>
     </div>
-    <form action=""><input class="input_text" type="text" name="" id=""> Nombre de contacto:</form>
-   <ul>
-    <li type="circle">Lorem ipsum</li>
-    <li type="circle">Lorem ipsum</li>
-    <li type="circle">Lorem ipsum</li>
-   </ul>
+
+    <form action="#">
+      <label for="nombre">Nombre:</label>
+      <input
+        type="text"
+        id="nombre"
+        name="nombre"
+        placeholder="Ingrese su nombre"
+      />
+      <input type="submit" value="Enviar" />
+    </form>
+
+    <ul>
+      <li>normal</li>
+      <li class="color-change">color</li>
+      <li class="content-change">content</li>
+      <li class="size-change">size</li>
+    </ul>
+
+    <p spellcheck="true" contenteditable="true">
+      Este es un ejemmplo de como usar ::spelling-error.
+    </p>
+
+    <div>
+      <span class="grammar-error">t he </span>quick brown
+      <span class="spelling-error">fxo</span> jumps over the lazy dog
+    </div>
+    <br /><br />
+    <!-- pseudoclases -->
+    <a href="#">Intenta pasar el mouse sobre este enlace.</a>
+
+    <br /><br />
+    <div>
+      <input type="radio" name="my-input" id="yes" />
+      <label for="yes">Yes</label>
+
+      <input type="radio" name="my-input" id="no" />
+      <label for="no">No</label>
+    </div>
+
+    <div>
+      <input type="checkbox" name="my-checkbox" id="opt-in" />
+      <label for="opt-in">Check me!</label>
+    </div>
+
+    <select name="my-select" id="fruit">
+      <option value="opt1">Apples</option>
+      <option value="opt2">Grapes</option>
+      <option value="opt3">Pears</option>
+    </select>
+
+    <br /><br />
+
+    <div lang="en">
+      <q>Esta cita en inglés tiene una cita <q>anidada</q> adentro.</q>
+    </div>
+    <div lang="fr">
+      <q>Esta cita en francés tiene una cita <q>anidada</q> adentro.</q>
+    </div>
+    <div lang="de">
+      <q>Esta cita en aleman tiene una cita <q>anidada</q> adentro.</q>
+    </div>
+  </body>
 </html>

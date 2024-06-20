@@ -1,0 +1,101 @@
+body{
+    background-color: rgb(230, 230, 230);
+}
+a:link{
+    color: aquamarine;
+}
+
+a:visited {
+ color: blueviolet;
+}
+a:hover{
+    color: blue;
+}
+
+a:active {
+    color: brown;
+}
+li:nth-child(1){
+    border-radius: 5px;
+    background-color: azure;
+}
+h3::before{
+    content: "-";
+}
+h3::after{
+    content: "";
+}
+.highlight::before {
+    content: "★ ";
+    color: gold;
+}
+
+.highlight::after {
+    content: " ★";
+    color: gold;
+}
+
+.blockquote::before {
+    content: open-quote;
+    font-size: 2em;
+    color: gray;
+    margin-right: 10px;
+}
+
+.blockquote::after {
+    content: close-quote;
+    font-size: 2em;
+    color: gray;
+    margin-left: 10px;
+}
+.green_text::first-line {
+    color: rgb(18, 179, 0);
+}
+.green_text::selection {
+    color:#fff;
+    background-color: rgb(18, 179, 0);
+}
+.input_text::placeholder{
+    color: rgb(255, 0, 0);
+}
+.contenedor {
+    width: 300px;
+    height: 200px;
+    background-color: #ffffff50;
+    border: 1px solid #ccc;
+    position: relative;
+}
+.background {
+    color: aqua;
+}
+.contenido {
+    position: relative;
+    z-index: 1; /* Asegurar que el contenido esté por encima del backdrop */
+    padding: 20px;
+}
+.contenedor::backdrop {
+    backdrop-filter: blur(10px); /* Aplicar un desenfoque de 10px al fondo */
+    -webkit-backdrop-filter: blur(10px); /* Prefijo necesario para navegadores basados en WebKit como Safari */
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1; /* Asegurar que el backdrop esté detrás del contenido */
+}
+.li::marker {
+    content: close-quote;
+    font-size: 2em;
+    color: gray;
+    margin-left: 10px;
+}
+.li::spelling-error {
+    color: red;
+}
+.blockquote::grammar-error{
+    content: close-quote;
+    font-size: 2em;
+    color: gray;
+    margin-left: 10px;
+}
+
